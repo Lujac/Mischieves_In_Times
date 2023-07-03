@@ -1,0 +1,175 @@
+﻿{
+	"mycroftDialogue" : [
+		{
+			"id" : 0,
+			"name" : "???",
+			"text" : "You there! Stop!",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 1,
+			"name" : "???",
+			"text" : "What are you doing here?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 2,
+			"name" : "nomJoueur",
+			"text" : "I… uh… fell down here.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 3,
+			"name" : "???",
+			"text" : "You “fell down”? In front of <b>her Majesty</b>’s palace?",
+			"highlight" : true,
+			"highlighteWords": ["her Majesty"],
+			"explanationWord": [" term to address the monarch, her for the Queen, his for the King"],
+			"isEnd" : false
+		},
+		{
+			"id" : 4,
+			"name" : "nomJoueur",
+			"text" : "Yes?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 5,
+			"name" : "???",
+			"text" : "...",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 6,
+			"name" : "???",
+			"text" : "What is this behind you?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 7,
+			"name" : "nomJoueur",
+			"text" : "How I fell down.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 8,
+			"name" : "???",
+			"text" : "Is it to hurt her Majesty? I won’t hesitate <b>to have you jailed</b>.",
+			"highlight" : true,
+			"highlighteWords": ["to have you jailed"],
+			"explanationWord": ["Synonym: to imprison you"],
+			"isEnd" : false
+		},
+		{
+			"id" : 9,
+			"name" : "nomJoueur",
+			"text" : "I don’t want to hurt the Queen, sir.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 10,
+			"name" : "???",
+			"text" : "Then what are you doing here?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 11,
+			"name" : "nomJoueur",
+			"text" : "I don’t know. I want to go home.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 12,
+			"name" : "???",
+			"text" : "And how would you get home?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 13,
+			"name" : "nomJoueur",
+			"text" : "I need a clock.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 14,
+			"name" : "nomJoueur",
+			"text" : "Just like the one you have.",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 15,
+			"name" : "???",
+			"text" : " My <b>pocket watch</b> ? It is not a <b>vulgar</b> clock! Why would it help you?",
+			"highlight" : true,
+			"highlighteWords": ["pocket watch","vulgar"],
+			"explanationWord": ["image d’une montre à gousset", "[ˈvʌlgər], not simple or ordinary"],
+			"isEnd" : false
+		},
+		{
+			"id" : 16,
+			"name" : "nomJoueur",
+			"text" : "It’s from the machine. I need it. <b>Otherwise</b>, I will stay here.",
+			"highlight" : true,
+			"highlighteWords": ["Otherwise"],
+			"explanationWord": ["Synonym: or else, if not"],
+			"isEnd" : false
+		},
+		{
+			"id" : 17,
+			"name" : "???",
+			"text" : "...",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 18,
+			"name" : "???",
+			"text" : "You shall have it, but on one condition. Give this <b>pipe</b> to my dear brother. You will find him at 221B Baker Street. Come back here afterwards, I will get you home.",
+			"highlight" : true,
+			"highlighteWords": ["pipe"],
+			"explanationWord": ["image d’une pipe + [paɪp]"],
+			"isEnd" : false
+		}
+	]
+}

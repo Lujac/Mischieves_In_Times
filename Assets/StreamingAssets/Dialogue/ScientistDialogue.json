@@ -1,0 +1,198 @@
+﻿{
+	"scientistDialogue0" : [
+		{
+			"id" : 0,
+			"name" : "Scientist",
+			"text" : "You need to speak English! You’re in England!",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 1,
+			"name" : "nomJoueur",
+			"text" : "<I>(Quoi ? Qu’est-ce que c’est que cette histoire ? Je croyais que c’était une machine pour la météo, pas de téléportation…)</I>",
+			"nbLine" : 3,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 2,
+			"name" : "nomJoueur",
+			"text" : "Why am I in England?",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 3,
+			"name" : "Scientist",
+			"text" : " You are there because my <b>machine</b> worked hahaha!",
+			"nbLine" : 2,
+			"highlight" : true,
+			"highlighteWords": ["machine"],
+			"explanationWord": ["[məˈʃiːn]"],
+			"isEnd" : false
+		},
+		{
+			"id" : 4,
+			"name" : "nomJoueur",
+			"text" : "<I>(Elle avait parlé de météo. Qu’est-ce qu’elle me chante ?)</I>",
+			"nbLine" : 2,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 5,
+			"name" : "Scientist",
+			"text" : " My precious time machine…",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 6,
+			"name" : "nomJoueur",
+			"text" : "Time ? But it’s not “temps” !",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 7,
+			"name" : "Scientist",
+			"text" : "Yes it is. I’ve taken some French lessons before. What did you think it was?",
+			"nbLine" : 2,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 8,
+			"name" : "nomJoueur",
+			"text" : "Something with the sun, the clouds…",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 9,
+			"name" : "Scientist",
+			"text" : "A weather machine? Weird. It already exists. Anyway, there’s something wrong with it.",
+			"nbLine" : 2,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 10,
+			"name" : "nomJoueur",
+			"text" : "With what? The machine?",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 11,
+			"name" : "Scientist",
+			"text" : "Yes. Something broke. Can you take a look?",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		}
+	],
+	"scientistDialogue1" : [
+		{
+			"id" : 0,
+			"name" : "nomJoueur",
+			"text" : "It’s the clock.",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 1,
+			"name" : "Scientist",
+			"text" : "That’s a problem. I have no idea where it could have fallen, or when, because you traveled through time.",
+			"nbLine" : 3,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		}
+	],
+	"scientistDialogue2" : [
+		{
+			"id" : 0,
+			"name" : "Scientist",
+			"text" : "How interesting! <br>You’ve met the famous Mycroft.",
+			"nbLine" : 2,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 1,
+			"name" : "nomJoueur",
+			"text" : "Who?",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		},
+		{
+			"id" : 2,
+			"name" : "Scientist",
+			"text" : "The <b>elusive</b> Mycroft Holmes! <br>He works for the Queen’s secret service. <b>Doyle wrote about him.",
+			"nbLine" : 3,
+			"highlight" : true,
+			"highlighteWords": ["elusive"],
+			"explanationWord": ["[ɪˈluːsɪv] + difficult to describe or define"],
+			"isEnd" : false
+		},
+		{
+			"id" : 3,
+			"name" : "nomJoueur",
+			"text" : "I’ll never remember everything…",
+			"nbLine" : 1,
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		},
+		{
+			"id" : 2,
+			"name" : "Scientist",
+			"text" : "No worries, you have a tablet with you. <br>You’ll be able <b>to keep track</b> of all the people you meet.",
+			"nbLine" : 3,
+			"highlight" : true,
+			"highlighteWords": ["to keep track"],
+			"explanationWord": ["to make certain that you know what is happening or has happened."],
+			"isEnd" : true
+		}
+	]
+}

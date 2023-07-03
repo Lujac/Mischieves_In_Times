@@ -1,0 +1,13 @@
+﻿{
+	"intro" : [
+		{
+			"id" : 0,
+			"name" : " nomJoueur ",
+			"text" : "<I>(Je suis où là ? C’est quoi ce bâtiment ?)</I>",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		}
+	]
+}

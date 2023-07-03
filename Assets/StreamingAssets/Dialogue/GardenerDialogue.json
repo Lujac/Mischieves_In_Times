@@ -1,0 +1,22 @@
+﻿{
+	"gardenerDialogue" : [
+		{
+			"id" : 0,
+			"name" : "nomJoueur",
+			"text" : "Bonjour Monsieur, excusez-moi, mais où suis-je ?",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : false
+		},
+		{
+			"id" : 1,
+			"name" : "Roger the gardener",
+			"text" : "Can you repeat please? ",
+			"highlight" : false,
+			"highlighteWords": [],
+			"explanationWord": [],
+			"isEnd" : true
+		}
+	]
+}

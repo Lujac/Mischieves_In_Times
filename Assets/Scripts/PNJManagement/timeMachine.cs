@@ -26,8 +26,8 @@ public class timeMachine : MonoBehaviour
             btnTab.GetComponent<Animator>().SetBool("notif", true);
 
             tab.GetComponent<tab_menu>().notifbtn[5] = true;
-            tabMail.GetComponent<DialogueScientist>().nbDialogue = 1;
-            tabMail.GetComponent<DialogueScientist>().Display(0, tabMail.GetComponent<DialogueScientist>().data.scientistDialogue1);
+            tabMail.GetComponent<MailSystem>().DialogueNumber = 1;
+            tabMail.GetComponent<MailSystem>().DisplayDialogue();
             GetComponent<BoxCollider2D>().enabled = false;
             missionsManager.missionManagerInstance.SupprMission(0);
         }

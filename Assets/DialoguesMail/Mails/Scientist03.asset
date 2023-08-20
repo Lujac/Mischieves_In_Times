@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af08b427e953c924690d7fa4b03cca57, type: 3}
+  m_Name: Scientist03
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - "How interesting! <br>You\u2019ve met the famous Mycroft.\t"
+  - "Who?\t"
+  - "The elusive Mycroft Holmes! <br>He works for the Queen\u2019s secret service.
+    Doyle wrote about him.\t"
+  - "I\u2019ll never remember everything\u2026\t"
+  - "No worries, you have a tablet with you. <br>You\u2019ll be able to keep track
+    of all the people you meet.\t"
+  characterNames:
+  - Scientist
+  - 
+  - Scientist
+  - 
+  - Scientist
+  NombreLigne: 0200000001000000030000000100000003000000

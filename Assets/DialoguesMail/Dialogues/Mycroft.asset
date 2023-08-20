@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1648350ee316640b6ef909a334c1d5, type: 3}
+  m_Name: Mycroft
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - "You there! Stop!\t"
+  - "What are you doing here?\t"
+  - "I\u2026 uh\u2026 fell down here.\t"
+  - You "fell down"? In front of her Majesty's palace?
+  - Yes?
+  - ...
+  - "What is this behind you?\t"
+  - "How I fell down.\t"
+  - "Is it to hurt her Majesty? I won't hesitate to have you jailed.\t"
+  - "I don\u2019t want to hurt the Queen, sir.\t"
+  - "Then what are you doing here?\t"
+  - "I don\u2019t know. I want to go home.\t"
+  - "And how would you get home?\t"
+  - "I need a clock.\t"
+  - "Just like the one you have.\t"
+  - My pocket watch ? It is not a vulgar clock! Why would it help you?
+  - It's from the machine. I need it. Otherwise, I will stay here.
+  - ...
+  - "You shall have it, but on one condition. Give this pipe to my dear brother.
+    You will find him at 221B Baker Street. Come back here afterwards, I will get
+    you home.\t"
+  characterNames:
+  - "???\t"
+  - "???\t"
+  - 
+  - ???
+  - 
+  - ???
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
+  - 
+  - ???
+  - 
+  - ???
+  - ???

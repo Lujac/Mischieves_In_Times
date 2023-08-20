@@ -76,10 +76,11 @@ public class DialogueScientist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        verticalScroll.GetComponent<Scrollbar>().value = 0;
+        
         //Changement de phrase de dialogue en fonction du numero du dialogue sur lequel on est
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            verticalScroll.GetComponent<Scrollbar>().value = 0;
             switch (nbDialogue)
             {
                 case 0:

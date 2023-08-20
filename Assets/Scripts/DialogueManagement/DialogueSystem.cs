@@ -1,8 +1,3 @@
-// Resume : Ce script est utilise pour gerer un systeme de dialogue dans un jeu Unity.
-// Il permet d'afficher et de controler le deroulement du dialogue, la mise en gras des mots specifiques a faire apprendre aux eleves, la gestion d'une boite speciale de dialogue pour voir la definition/ l'image qui correspond a un mot,
-// la recherche de definitions de mots. Il fournit egalement des fonctionnalites pour l'activation/desactivation du mouvement du personnage joueur,
-// et declenche un evenement a la fin du dialogue.
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +10,8 @@ public class DialogueSystem : MonoBehaviour
 {
     // References aux elements d'interface utilisateur utilises pour afficher le dialogue et les caracteres associes.
     public TextMeshProUGUI dialogueText, charaname;
-    public DialogueData dialogueData;
+    public DialogueData[] dialogueDatas; // Liste des DialogueData disponibles
+    public int dialogueNumber = 0;
     public Image BoiteDialogue, BoiteChara;
 
     // Indice pour suivre la ligne de dialogue actuelle.
@@ -52,16 +48,12 @@ public class DialogueSystem : MonoBehaviour
     public event Action OnDialogueEnd;
 
     // Methode appelee a chaque frame.
-    
-    
     private void Update()
     {
-       
         // Si la touche espace est enfoncee et le dialogue ne se deroule pas dans une boîte speciale, continuer le dialogue.
-        if (dialogueInProgress && activeDialogueSystem == this && Input.GetKeyDown(KeyCode.Space))
+        if (!inSpecialBox && dialogueInProgress && activeDialogueSystem == this && Input.GetKeyDown(KeyCode.Space))
         {
             ContinueDialogue();
-           
         }
 
         // Desactiver le controle du personnage du joueur si la boite de dialogue est active, sinon l'activer.
@@ -78,8 +70,6 @@ public class DialogueSystem : MonoBehaviour
     // Methode pour demarrer le dialogue.
     public void StartDialogue()
     {
-        
-
         // Vérifier si un autre dialogue est déjà en cours
         if (dialogueInProgress && activeDialogueSystem != this)
         {
@@ -87,17 +77,23 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
+        // Vérifier si le numéro de dialogue est valide
+        
+
         // Activer ce DialogueSystem comme le DialogueSystem actif
         activeDialogueSystem = this;
         dialogueInProgress = true;
-       
-        // Reinitialiser l'indice de ligne de dialogue.
+
+        // Réinitialiser l'indice de ligne de dialogue.
         currentLineIndex = 0;
 
-        // Afficher le premier dialogue et les elements d'interface associes.
+        // Obtenir le DialogueData correspondant au numéro de dialogue
+        DialogueData dialogueData = dialogueDatas[dialogueNumber];
+
+        // Afficher le premier dialogue et les éléments d'interface associés.
         dialogueText.text = ApplyRichTextTags(dialogueData.dialogueLines[currentLineIndex]);
 
-        // Verifier si le nom du personnage est vide ou non, puis l'afficher.
+        // Vérifier si le nom du personnage est vide ou non, puis l'afficher.
         if (string.IsNullOrEmpty(dialogueData.characterNames[currentLineIndex]))
         {
             charaname.text = PlayerPrefs.GetString("SelectedCharacter");
@@ -107,13 +103,13 @@ public class DialogueSystem : MonoBehaviour
             charaname.text = dialogueData.characterNames[currentLineIndex];
         }
 
-        // Activer les elements d'interface du dialogue.
+        // Activer les éléments d'interface du dialogue.
         dialogueText.gameObject.SetActive(true);
         charaname.gameObject.SetActive(true);
         BoiteDialogue.gameObject.SetActive(true);
         BoiteChara.gameObject.SetActive(true);
 
-        // Verifier si le dialogue contient des mots en gras et mettre a jour le bouton correspondant.
+        // Vérifier si le dialogue contient des mots en gras et mettre à jour le bouton correspondant.
         bool containsBoldWords = CheckIfDialogueContainsBoldWords(dialogueData.dialogueLines[currentLineIndex]);
         EyeButton.interactable = containsBoldWords;
 
@@ -126,32 +122,32 @@ public class DialogueSystem : MonoBehaviour
             EyeButtonImage.sprite = EyeClosed;
         }
 
-        // Mettre a jour la liste des mots en gras dans l'interface utilisateur.
+        // Mettre à jour la liste des mots en gras dans l'interface utilisateur.
         UpdateBoldWordsList(dialogueData.dialogueLines[currentLineIndex]);
     }
 
     // Methode pour continuer le dialogue.
     public void ContinueDialogue()
     {
-        // Verifier si ce n'est pas la derniere ligne du dialogue.
-        if (currentLineIndex < dialogueData.dialogueLines.Length - 1)
+        // Vérifier si ce n'est pas la dernière ligne du dialogue.
+        if (currentLineIndex < dialogueDatas[dialogueNumber].dialogueLines.Length - 1)
         {
-            // Passer a la ligne suivante du dialogue.
+            // Passer à la ligne suivante du dialogue.
             currentLineIndex++;
-            dialogueText.text = ApplyRichTextTags(dialogueData.dialogueLines[currentLineIndex]);
+            dialogueText.text = ApplyRichTextTags(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
 
-            // Verifier si le nom du personnage est vide ou non, puis l'afficher.
-            if (string.IsNullOrEmpty(dialogueData.characterNames[currentLineIndex]))
+            // Vérifier si le nom du personnage est vide ou non, puis l'afficher.
+            if (string.IsNullOrEmpty(dialogueDatas[dialogueNumber].characterNames[currentLineIndex]))
             {
                 charaname.text = PlayerPrefs.GetString("SelectedCharacter");
             }
             else
             {
-                charaname.text = dialogueData.characterNames[currentLineIndex];
+                charaname.text = dialogueDatas[dialogueNumber].characterNames[currentLineIndex];
             }
 
-            // Verifier si la ligne de dialogue contient des mots en gras et mettre a jour le bouton correspondant.
-            bool containsBoldWords = CheckIfDialogueContainsBoldWords(dialogueData.dialogueLines[currentLineIndex]);
+            // Vérifier si la ligne de dialogue contient des mots en gras et mettre à jour le bouton correspondant.
+            bool containsBoldWords = CheckIfDialogueContainsBoldWords(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
             EyeButton.interactable = containsBoldWords;
 
             if (containsBoldWords)
@@ -165,12 +161,12 @@ public class DialogueSystem : MonoBehaviour
                 Debug.Log("Ne contient pas de mots gras");
             }
 
-            // Mettre a jour la liste des mots en gras dans l'interface utilisateur.
-            UpdateBoldWordsList(dialogueData.dialogueLines[currentLineIndex]);
+            // Mettre à jour la liste des mots en gras dans l'interface utilisateur.
+            UpdateBoldWordsList(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
         }
         else
         {
-            // Si c'est la derniere ligne du dialogue, masquer les elements d'interface du dialogue.
+            // Si c'est la dernière ligne du dialogue, masquer les éléments d'interface du dialogue.
             dialogueInProgress = false; // Aucun dialogue en cours
             dialogueText.gameObject.SetActive(false);
             BoiteDialogue.gameObject.SetActive(false);
@@ -195,45 +191,72 @@ public class DialogueSystem : MonoBehaviour
         return false;
     }
 
-    // Methode pour ajouter des balises de mise en forme et mettre en gras les mots definis dans customBoldWords.
+    // Methode pour mettre à jour la liste des mots en gras dans l'interface utilisateur.
+    private void UpdateBoldWordsList(string text)
+    {
+        // Par defaut, desactiver tous les mots en gras.
+        foreach (TextMeshProUGUI boldWordText in boldWordsTexts)
+        {
+            boldWordText.gameObject.SetActive(false);
+        }
+
+        // Vérifier si le texte est vide.
+        if (string.IsNullOrEmpty(text))
+        {
+            // Aucun texte à traiter, donc retourner.
+            return;
+        }
+
+        // Parcourir tous les mots definis dans customBoldWords.
+        foreach (string word in customBoldWords)
+        {
+            // Vérifier si le mot est présent dans la ligne de dialogue.
+            if (text.Contains(word))
+            {
+                // Rechercher toutes les occurrences du mot dans la ligne de dialogue.
+                int startIndex = 0;
+                while (startIndex < text.Length)
+                {
+                    int wordIndex = text.IndexOf(word, startIndex, StringComparison.OrdinalIgnoreCase);
+                    if (wordIndex == -1)
+                    {
+                        break;
+                    }
+
+                    // Mettre en gras le mot dans la ligne de dialogue et l'afficher dans l'interface utilisateur.
+                    string boldText = $"<b>{word}</b>";
+                    text = text.Substring(0, wordIndex) + boldText + text.Substring(wordIndex + word.Length);
+                    foreach (TextMeshProUGUI boldWordTextInstance in boldWordsTexts)
+                    {
+                        if (!boldWordTextInstance.gameObject.activeSelf)
+                        {
+                            boldWordTextInstance.gameObject.SetActive(true);
+                            boldWordTextInstance.text = word;
+                            break;
+                        }
+                    }
+
+                    startIndex = wordIndex + boldText.Length;
+                }
+            }
+        }
+
+        // Mettre à jour la ligne de dialogue avec les mots en gras.
+        dialogueText.text = ApplyRichTextTags(text);
+    }
+    // Methode pour appliquer les balises de texte riches aux mots en gras.
     private string ApplyRichTextTags(string text)
     {
         foreach (string word in customBoldWords)
         {
-            text = text.Replace(word, "<b>" + word + "</b>");
+            text = text.Replace(word, $"<b>{word}</b>");
         }
         return text;
     }
 
-    // Methode pour mettre a jour la liste des mots en gras a afficher dans l'interface utilisateur.
-    private void UpdateBoldWordsList(string dialogueLine)
-    {
-        List<string> boldWordsList = new List<string>();
 
-        foreach (string word in customBoldWords)
-        {
-            if (dialogueLine.Contains(word))
-            {
-                boldWordsList.Add(word);
-            }
-        }
-
-        for (int i = 0; i < boldWordsTexts.Length; i++)
-        {
-            if (i < boldWordsList.Count)
-            {
-                boldWordsTexts[i].text = boldWordsList[i];
-                boldWordsTexts[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                boldWordsTexts[i].gameObject.SetActive(false);
-            }
-        }
-    }
-
-    // Methode pour activer la boite speciale de dialogue.
-    public void EnterSpecialBox()
+// Methode pour activer la boite speciale de dialogue.
+public void EnterSpecialBox()
     {
         Inside.SetActive(true);
         Outside.SetActive(false);

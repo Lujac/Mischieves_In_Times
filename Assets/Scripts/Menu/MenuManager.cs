@@ -78,7 +78,7 @@ public class MenuManager : MonoBehaviour
         string[] bannedWords = {
         "Français",
         "Anglais",
-        "bite", "kiki", "teub", "pénis", "nouille",
+        "bite", "kiki", "zizi", "batard", "teub", "pénis", "nouille",
         "vagin", "chatte", "choune", "utérus", "clitoris", "clito",
         "cul", "cu", "anus", "anu", "trou", "balle", "tdb", "TDB",
         "nichon", "nichons", "sein", "seins", "poitrine",

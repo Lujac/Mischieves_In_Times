@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start.unity
+    path: Assets/Scenes/Londres/Start.unity
     guid: 525c95662ea66774d93057917106cc1f
   - enabled: 1
     path: Assets/Scenes/Londres/StJamesPark.unity

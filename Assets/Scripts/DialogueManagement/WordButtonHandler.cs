@@ -12,19 +12,36 @@ public class WordButtonHandler : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        word = GetComponentInChildren<TextMeshProUGUI>().text;
+        TextMeshProUGUI textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
 
-        foreach (DialogueSystem dialogueSystem in dialogueSystems)
+        if (textMeshPro != null)
         {
-            WordDefinition wordDefinition = dialogueSystem.GetWordDefinition(word);
+            word = textMeshPro.text;
 
-            if (wordDefinition != null)
+            foreach (DialogueSystem dialogueSystem in dialogueSystems)
             {
-                definitionText.text = wordDefinition.definition;
-                wordImage.sprite = wordDefinition.sprite;
+                WordDefinition wordDefinition = dialogueSystem.GetWordDefinition(word);
 
-                definitionText.gameObject.SetActive(true);
-                wordImage.gameObject.SetActive(true);
+                if (wordDefinition != null)
+                {
+                    definitionText.text = wordDefinition.definition;
+                    wordImage.sprite = wordDefinition.sprite;
+
+                    definitionText.gameObject.SetActive(true);
+                    wordImage.gameObject.SetActive(true);
+
+                    // Vérifier s'il y a une image et du texte dans WordDefinition
+                    if (wordDefinition.sprite != null && !string.IsNullOrEmpty(wordDefinition.definition))
+                    {
+                        // Appliquer l'alignement et le style de texte spécifié
+                        definitionText.alignment = TextAlignmentOptions.Bottom;
+                        definitionText.fontStyle = FontStyles.Bold;
+                    }
+                    else
+                    {
+                        
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af08b427e953c924690d7fa4b03cca57, type: 3}
+  m_Name: Scientist01
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - "You need to speak English! You\u2019re in England!\t"
+  - "<I>(Quoi ? Qu\u2019est-ce que c\u2019est que cette histoire ? Je croyais que
+    c\u2019\xE9tait une machine pour la m\xE9t\xE9o, pas de t\xE9l\xE9portation\u2026)</I>\t"
+  - "Why am I in England?\t"
+  - "You are there because my machine worked hahaha!\t"
+  - "<I>(Elle avait parl\xE9 de m\xE9t\xE9o. Qu\u2019est-ce qu\u2019elle me chante
+    ?)</I>\t"
+  - "My precious time machine\u2026\t"
+  - "Time ? But it\u2019s not \u201Ctemps\u201D !\t"
+  - "Yes it is. I\u2019ve taken some French lessons before. What did you think it
+    was?\t"
+  - "Something with the sun, the clouds\u2026\t"
+  - "A weather machine? Weird. It already exists. Anyway, there\u2019s something
+    wrong with it.\t"
+  - "With what? The machine?\t"
+  - "Yes. Something broke. Can you take a look?\t"
+  characterNames:
+  - Scientist
+  - 
+  - 
+  - Scientist
+  - 
+  - Scientist
+  - 
+  - Scientist
+  - 
+  - Scientist
+  - 
+  - Scientist
+  NombreLigne: 010000000300000001000000020000000200000001000000010000000200000001000000020000000100000001000000

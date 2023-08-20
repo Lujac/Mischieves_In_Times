@@ -1,16 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MailSystem : MonoBehaviour
 {
     public GameObject prefabMailScientist; // Prefab du MailScientist à instancier à certains moments
     public GameObject prefabMailPlayer; // Prefab du MailPlayer à instancier à certains moments
     public GameObject parentMail; // L'endroit où les prefabs doivent être instanciés
+    public GameObject pressEspace;
+    public GameObject verticalScroll;
     public List<MailData> MailList; // Modifier le type de DialogueList en List<DialogueData>
     public int DialogueNumber;
     private int currentLineIndex;
+    private int currentMailIndex = 0;
     private int posYDial = 0;
     private static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
+    private bool Mailinprogress = false;
+    private bool MailEnd = false;
+    
 
     void Start()
     {
@@ -34,25 +41,50 @@ public class MailSystem : MonoBehaviour
 
     void Update()
     {
+        if (verticalScroll.GetComponent<Scrollbar>().value < 0 ||(verticalScroll.GetComponent<Scrollbar>().value != 0 && Mailinprogress))
+        {
+            verticalScroll.GetComponent<Scrollbar>().value = 0;
+            Mailinprogress = false;
+
+        }
+        
+
+        if (MailEnd)
+        {
+
+
+        }
+        
+        if (verticalScroll.GetComponent<Scrollbar>().value > 1)
+        {
+            verticalScroll.GetComponent<Scrollbar>().value = 1;
+
+        }
+
         // Si la touche espace est enfoncée et qu'il n'y a pas de dialogue en cours
         if (Input.GetKeyDown(KeyCode.Space) && dialogueInProgress)
         {
+            
             // Si currentLineIndex est inférieur à la taille du tableau dialogueLines pour le dialogue actuel
             if (currentLineIndex < MailList[DialogueNumber].dialogueLines.Length - 1)
             {
                 currentLineIndex++; // Augmenter currentLineIndex pour passer à la prochaine ligne du dialogue
-
+                currentMailIndex++;
                 DisplayDialogue();
+                
             }
             else
             {
-                // Faire ce que tu veux lorsque le dialogue actuel est terminé
+                Mailinprogress= false;
+                MailEnd = true;
             }
+            
         }
     }
 
-    void DisplayDialogue()
+    public void DisplayDialogue()
     {
+        Mailinprogress= true;
         MailData dialogueData = MailList[DialogueNumber];
         GameObject mailGo;
         
@@ -102,7 +134,10 @@ public class MailSystem : MonoBehaviour
         posYDial += -75 - 35 * dialogueData.NombreLigne[currentLineIndex];
         parentMail.GetComponent<RectTransform>().sizeDelta = new Vector2(1600, Mathf.Abs(posYDial));
         mailGo.GetComponent<RectTransform>().sizeDelta = new Vector2(900, 60 + 30 * dialogueData.NombreLigne[currentLineIndex]);
+        
+        verticalScroll.GetComponent<Scrollbar>().numberOfSteps = currentMailIndex;
         // Calculer la valeur de posYDial en fonction du nombre de lignes dans dialogueLines[]
+        pressEspace.SetActive(true);
 
     }
 

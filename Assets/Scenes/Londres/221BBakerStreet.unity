@@ -180,6 +180,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1555694422}
     m_Modifications:
+    - target: {fileID: 1590376214213748021, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590376214213748021, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2001563643605335900, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
       propertyPath: m_Name
       value: Tablette
@@ -266,6 +274,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2001563643605335901, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961340947268558288, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961340947268558288, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961340947268558288, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5862,7 +5882,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294017948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

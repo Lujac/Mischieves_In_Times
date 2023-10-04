@@ -42,7 +42,7 @@ public class MenuManager : MonoBehaviour
         saisieNom.SetActive(true);
         selectionPersonnage.SetActive(false);
 
-        // Mettre à jour le nom du sprite sélectionné pour le personnage garçon
+        // Mettre ï¿½ jour le nom du sprite sï¿½lectionnï¿½ pour le personnage garï¿½on
         selectedSpriteName = "chara_02";
     }
 
@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
         saisieNom.SetActive(true);
         selectionPersonnage.SetActive(false);
 
-        // Mettre à jour le nom du sprite sélectionné pour le personnage fille
+        // Mettre ï¿½ jour le nom du sprite sï¿½lectionnï¿½ pour le personnage fille
         selectedSpriteName = "chara_01";
     }
 
@@ -67,23 +67,23 @@ public class MenuManager : MonoBehaviour
     {
         string selectedCharacter = inputFieldName.text;
 
-        // Vérifier si le nom du personnage contient au moins 2 caractères
+        // Vï¿½rifier si le nom du personnage contient au moins 2 caractï¿½res
         if (selectedCharacter.Length < 2)
         {
             messageText.text = "Ce nom est trop court !";
             return;
         }
 
-        // Vérifier si le nom du personnage contient des mots interdits
+        // Vï¿½rifier si le nom du personnage contient des mots interdits
         string[] bannedWords = {
-        "Français",
+        "Franï¿½ais",
         "Anglais",
-        "bite", "kiki", "zizi", "batard", "teub", "pénis", "nouille",
-        "vagin", "chatte", "choune", "utérus", "clitoris", "clito",
+        "bite", "kiki", "zizi", "batard", "teub", "pï¿½nis", "nouille",
+        "vagin", "chatte", "choune", "utï¿½rus", "clitoris", "clito",
         "cul", "cu", "anus", "anu", "trou", "balle", "tdb", "TDB",
         "nichon", "nichons", "sein", "seins", "poitrine",
         "couille", "couilles", "testicule", "testicules",
-        "pute", "salope", "salop", "conne", "connard", "salaud", "PD", "con", "enculé",
+        "pute", "salope", "salop", "conne", "connard", "salaud", "PD", "con", "encule",
         "dick", "penis", "cock",
         "vagina", "pussy", "pusy", "pussi", "pusi", "uterus",
         "ass", "hole", "asshole", "ashole", "asole", "assol", "asol",
@@ -97,18 +97,18 @@ public class MenuManager : MonoBehaviour
         {
             if (selectedCharacter.ToLower().Contains(word.ToLower()))
             {
-                messageText.text = "Ce nom n'est pas autorisé !";
+                messageText.text = "Ce nom n'est pas autorisï¿½ !";
                 return;
             }
         }
 
-        // Enregistrer le personnage sélectionné dans les PlayerPrefs
+        // Enregistrer le personnage sï¿½lectionnï¿½ dans les PlayerPrefs
         PlayerPrefs.SetString("SelectedCharacter", selectedCharacter);
 
-        // Enregistrer le nom du sprite sélectionné dans les PlayerPrefs
+        // Enregistrer le nom du sprite selectionne dans les PlayerPrefs
         PlayerPrefs.SetString("SelectedSpriteName", selectedSpriteName);
 
-        // Charger une nouvelle scène qui contient votre joueur
+        // Charger une nouvelle scene qui contient votre joueur
         SceneManager.LoadScene(scene);
     }
 

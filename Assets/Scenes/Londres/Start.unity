@@ -3719,7 +3719,7 @@ MonoBehaviour:
   personnageFille: {fileID: 942649572}
   characterAppearance: {fileID: 0}
   messageText: {fileID: 976356427}
-  scene: BuckinghamPalace
+  scene: Introduction
 --- !u!4 &2133795710
 Transform:
   m_ObjectHideFlags: 0

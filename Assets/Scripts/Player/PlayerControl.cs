@@ -17,10 +17,10 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
-        // Une seule instance dans la scène
+        // Une seule instance dans la scï¿½ne
         if (agentMovementInstance != null)
         {
-            Debug.Log("Il y a plus d'une instance de playerMovement dans la scène");
+            Debug.Log("Il y a plus d'une instance de playerMovement dans la scï¿½ne");
             Destroy(this);
             return;
         }
@@ -50,13 +50,27 @@ public class PlayerControl : MonoBehaviour
            
         }
 
-        //Activation tablette
-        if (Input.GetKeyDown(KeyCode.T) && !dialIsActive)
+        if (Input.GetKeyDown(KeyCode.T))
         {
+            TabOpen();
+        }
+       
+
+    }
+
+    public void TabOpen() { 
+        //Activation tablette
+        
+        if(!dialIsActive){
+            
             tabIsActive = !tabIsActive;
             tablette.SetActive(tabIsActive);
             isActive = !tabIsActive;
+
         }
+            
+        
+        
         if (tabIsActive)
         {
             btnTab.GetComponent<Animator>().SetBool("notif", false);
@@ -68,7 +82,7 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 newPosition = rb.position + movement * moveSpeed * Time.deltaTime;
-        movement.Normalize(); // Pour s'assurer que le personnage se déplace à la même vitesse dans toutes les directions
+        movement.Normalize(); // Pour s'assurer que le personnage se dï¿½place ï¿½ la mï¿½me vitesse dans toutes les directions
         if (walkableTilemap.HasTile(walkableTilemap.WorldToCell(newPosition)))
         {
             rb.MovePosition(newPosition);

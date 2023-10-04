@@ -16,11 +16,11 @@ public class DialogueSystem : MonoBehaviour
 
     // Indice pour suivre la ligne de dialogue actuelle.
     private int currentLineIndex;
-    private static DialogueSystem activeDialogueSystem; // Référence au DialogueSystem actif
-    private static bool dialogueInProgress; // Indicateur si un dialogue est en cours
+    private static DialogueSystem activeDialogueSystem; // Rï¿½fï¿½rence au DialogueSystem actif
+    public static bool dialogueInProgress; // Indicateur si un dialogue est en cours
 
 
-    // Reference au composant PlayerControl pour contrôler le personnage du joueur.
+    // Reference au composant PlayerControl pour contrï¿½ler le personnage du joueur.
     public PlayerControl playerControl;
 
     // Tableau de mots qui seront mis en gras dans le dialogue.
@@ -38,19 +38,19 @@ public class DialogueSystem : MonoBehaviour
     // Tableau de TextMeshProUGUI pour afficher les mots en gras dans l'interface utilisateur.
     public TextMeshProUGUI[] boldWordsTexts;
 
-    // Booleen indiquant si le dialogue se deroule dans une boîte spéciale.
+    // Booleen indiquant si le dialogue se deroule dans une boï¿½te spï¿½ciale.
     public bool inSpecialBox = false;
 
     // Liste de definitions de mots.
     public List<WordDefinition> wordDefinitions;
 
-    // Evenement déclenche a la fin du dialogue.
+    // Evenement dï¿½clenche a la fin du dialogue.
     public event Action OnDialogueEnd;
 
     // Methode appelee a chaque frame.
     private void Update()
     {
-        // Si la touche espace est enfoncee et le dialogue ne se deroule pas dans une boîte speciale, continuer le dialogue.
+        // Si la touche espace est enfoncee et le dialogue ne se deroule pas dans une boï¿½te speciale, continuer le dialogue.
         if (!inSpecialBox && dialogueInProgress && activeDialogueSystem == this && Input.GetKeyDown(KeyCode.Space))
         {
             ContinueDialogue();
@@ -70,30 +70,36 @@ public class DialogueSystem : MonoBehaviour
     // Methode pour demarrer le dialogue.
     public void StartDialogue()
     {
-        // Vérifier si un autre dialogue est déjà en cours
+        // Vï¿½rifier si un autre dialogue est dï¿½jï¿½ en cours
         if (dialogueInProgress && activeDialogueSystem != this)
         {
-            // Ignorer le démarrage du dialogue si un autre dialogue est déjà en cours
+            // Ignorer le dï¿½marrage du dialogue si un autre dialogue est dï¿½jï¿½ en cours
             return;
         }
 
-        // Vérifier si le numéro de dialogue est valide
+        // Vï¿½rifier si le numï¿½ro de dialogue est valide
         
 
         // Activer ce DialogueSystem comme le DialogueSystem actif
         activeDialogueSystem = this;
         dialogueInProgress = true;
+        if (playerControl != null)
+{
+    playerControl.dialIsActive = true; // AccÃ©dez Ã  dialIsActive via l'instance playerControl
+}
+       
 
-        // Réinitialiser l'indice de ligne de dialogue.
+
+        // Rï¿½initialiser l'indice de ligne de dialogue.
         currentLineIndex = 0;
 
-        // Obtenir le DialogueData correspondant au numéro de dialogue
+        // Obtenir le DialogueData correspondant au numï¿½ro de dialogue
         DialogueData dialogueData = dialogueDatas[dialogueNumber];
 
-        // Afficher le premier dialogue et les éléments d'interface associés.
+        // Afficher le premier dialogue et les ï¿½lï¿½ments d'interface associï¿½s.
         dialogueText.text = ApplyRichTextTags(dialogueData.dialogueLines[currentLineIndex]);
 
-        // Vérifier si le nom du personnage est vide ou non, puis l'afficher.
+        // Vï¿½rifier si le nom du personnage est vide ou non, puis l'afficher.
         if (string.IsNullOrEmpty(dialogueData.characterNames[currentLineIndex]))
         {
             charaname.text = PlayerPrefs.GetString("SelectedCharacter");
@@ -103,13 +109,13 @@ public class DialogueSystem : MonoBehaviour
             charaname.text = dialogueData.characterNames[currentLineIndex];
         }
 
-        // Activer les éléments d'interface du dialogue.
+        // Activer les ï¿½lï¿½ments d'interface du dialogue.
         dialogueText.gameObject.SetActive(true);
         charaname.gameObject.SetActive(true);
         BoiteDialogue.gameObject.SetActive(true);
         BoiteChara.gameObject.SetActive(true);
 
-        // Vérifier si le dialogue contient des mots en gras et mettre à jour le bouton correspondant.
+        // Vï¿½rifier si le dialogue contient des mots en gras et mettre ï¿½ jour le bouton correspondant.
         bool containsBoldWords = CheckIfDialogueContainsBoldWords(dialogueData.dialogueLines[currentLineIndex]);
         EyeButton.interactable = containsBoldWords;
 
@@ -122,21 +128,21 @@ public class DialogueSystem : MonoBehaviour
             EyeButtonImage.sprite = EyeClosed;
         }
 
-        // Mettre à jour la liste des mots en gras dans l'interface utilisateur.
+        // Mettre ï¿½ jour la liste des mots en gras dans l'interface utilisateur.
         UpdateBoldWordsList(dialogueData.dialogueLines[currentLineIndex]);
     }
 
     // Methode pour continuer le dialogue.
     public void ContinueDialogue()
     {
-        // Vérifier si ce n'est pas la dernière ligne du dialogue.
+        // Vï¿½rifier si ce n'est pas la derniï¿½re ligne du dialogue.
         if (currentLineIndex < dialogueDatas[dialogueNumber].dialogueLines.Length - 1)
         {
-            // Passer à la ligne suivante du dialogue.
+            // Passer ï¿½ la ligne suivante du dialogue.
             currentLineIndex++;
             dialogueText.text = ApplyRichTextTags(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
 
-            // Vérifier si le nom du personnage est vide ou non, puis l'afficher.
+            // Vï¿½rifier si le nom du personnage est vide ou non, puis l'afficher.
             if (string.IsNullOrEmpty(dialogueDatas[dialogueNumber].characterNames[currentLineIndex]))
             {
                 charaname.text = PlayerPrefs.GetString("SelectedCharacter");
@@ -146,7 +152,7 @@ public class DialogueSystem : MonoBehaviour
                 charaname.text = dialogueDatas[dialogueNumber].characterNames[currentLineIndex];
             }
 
-            // Vérifier si la ligne de dialogue contient des mots en gras et mettre à jour le bouton correspondant.
+            // Vï¿½rifier si la ligne de dialogue contient des mots en gras et mettre ï¿½ jour le bouton correspondant.
             bool containsBoldWords = CheckIfDialogueContainsBoldWords(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
             EyeButton.interactable = containsBoldWords;
 
@@ -161,13 +167,18 @@ public class DialogueSystem : MonoBehaviour
                 Debug.Log("Ne contient pas de mots gras");
             }
 
-            // Mettre à jour la liste des mots en gras dans l'interface utilisateur.
+            // Mettre ï¿½ jour la liste des mots en gras dans l'interface utilisateur.
             UpdateBoldWordsList(dialogueDatas[dialogueNumber].dialogueLines[currentLineIndex]);
         }
         else
         {
-            // Si c'est la dernière ligne du dialogue, masquer les éléments d'interface du dialogue.
+            // Si c'est la derniï¿½re ligne du dialogue, masquer les ï¿½lï¿½ments d'interface du dialogue.
             dialogueInProgress = false; // Aucun dialogue en cours
+            if (playerControl != null)
+{
+    playerControl.dialIsActive = false; // AccÃ©dez Ã  dialIsActive via l'instance playerControl
+}
+      
             dialogueText.gameObject.SetActive(false);
             BoiteDialogue.gameObject.SetActive(false);
             charaname.gameObject.SetActive(false);
@@ -191,7 +202,7 @@ public class DialogueSystem : MonoBehaviour
         return false;
     }
 
-    // Methode pour mettre à jour la liste des mots en gras dans l'interface utilisateur.
+    // Methode pour mettre ï¿½ jour la liste des mots en gras dans l'interface utilisateur.
     private void UpdateBoldWordsList(string text)
     {
         // Par defaut, desactiver tous les mots en gras.
@@ -200,17 +211,17 @@ public class DialogueSystem : MonoBehaviour
             boldWordText.gameObject.SetActive(false);
         }
 
-        // Vérifier si le texte est vide.
+        // Vï¿½rifier si le texte est vide.
         if (string.IsNullOrEmpty(text))
         {
-            // Aucun texte à traiter, donc retourner.
+            // Aucun texte ï¿½ traiter, donc retourner.
             return;
         }
 
         // Parcourir tous les mots definis dans customBoldWords.
         foreach (string word in customBoldWords)
         {
-            // Vérifier si le mot est présent dans la ligne de dialogue.
+            // Vï¿½rifier si le mot est prï¿½sent dans la ligne de dialogue.
             if (text.Contains(word))
             {
                 // Rechercher toutes les occurrences du mot dans la ligne de dialogue.
@@ -241,7 +252,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        // Mettre à jour la ligne de dialogue avec les mots en gras.
+        // Mettre ï¿½ jour la ligne de dialogue avec les mots en gras.
         dialogueText.text = ApplyRichTextTags(text);
     }
     // Methode pour appliquer les balises de texte riches aux mots en gras.

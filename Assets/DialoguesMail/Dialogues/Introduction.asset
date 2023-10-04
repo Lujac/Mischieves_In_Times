@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Introduction
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Qu'est ce que je fais l\xE0 ?"
-  - "Cette machine pour la m\xE9t\xE9o est plus puissante que je l'imaginais"
-  - "Je devrais aller parler \xE0 ce jardinier, il pourrait m'aider"
+  - "Mais... Qu'est ce que je fais l\xE0 ?"
+  - "Cette machine pour la m\xE9t\xE9o est plus puissante que je l'imaginais..."
+  - "Je devrais aller parler \xE0 ce jardinier devant, il pourrait m'aider."
   characterNames:
   - 
   - 

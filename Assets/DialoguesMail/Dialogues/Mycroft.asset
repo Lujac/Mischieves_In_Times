@@ -17,11 +17,11 @@ MonoBehaviour:
   - "What are you doing here?\t"
   - "I\u2026 uh\u2026 fell down here.\t"
   - You "fell down"? In front of her Majesty's palace?
-  - Yes?
+  - Well... yes?
   - ...
   - "What is this behind you?\t"
-  - "How I fell down.\t"
-  - "Is it to hurt her Majesty? I won't hesitate to have you jailed.\t"
+  - "This is... how I fell down.\t"
+  - Is it to hurt her Majesty? I won't hesitate to have you jailed !
   - "I don\u2019t want to hurt the Queen, sir.\t"
   - "Then what are you doing here?\t"
   - "I don\u2019t know. I want to go home.\t"
@@ -31,9 +31,9 @@ MonoBehaviour:
   - My pocket watch ? It is not a vulgar clock! Why would it help you?
   - It's from the machine. I need it. Otherwise, I will stay here.
   - ...
-  - "You shall have it, but on one condition. Give this pipe to my dear brother.
-    You will find him at 221B Baker Street. Come back here afterwards, I will get
-    you home.\t"
+  - You shall have it, but in one condition. Give this pipe to my dear brother. You
+    will find him at 221B Baker Street. Come back here afterwards, I will then give
+    it to you.
   characterNames:
   - "???\t"
   - "???\t"

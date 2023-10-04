@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dialogue Gardener
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Bonjour Monsieur, excusez-moi, mais o\xF9 suis-je ?"
-  - GUARDS !!! There is an intruder in Buckingam Palace ! PLEASE HELP ME !
+  - "Bonjour monsieur, excusez-moi, mais o\xF9 suis-je ?"
+  - GUARDS !!! There is an intruder in Buckingam Palace ! Help !
   characterNames:
   - 
   - Roger, The Gardener

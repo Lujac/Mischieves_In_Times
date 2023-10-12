@@ -77,14 +77,15 @@ public class PlayerControl : MonoBehaviour
     {
         Vector2 newPosition = rb.position + movement * moveSpeed * Time.deltaTime;
         movement.Normalize(); // Pour s'assurer que le personnage se d�place � la m�me vitesse dans toutes les directions
-        if (walkableTilemap.HasTile(walkableTilemap.WorldToCell(newPosition)))
-        {
+        // if (walkableTilemap.HasTile(walkableTilemap.WorldToCell(newPosition)))
+        // {
+        //     rb.MovePosition(newPosition);
+        // } 
+        // else 
+        // {
+        //     Debug.Log("TRUC");
+        // }
             rb.MovePosition(newPosition);
-        } 
-        else 
-        {
-            Debug.Log("TRUC");
-        }
         
     }
 

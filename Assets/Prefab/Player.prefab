@@ -74,18 +74,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010316551, y: -0.049135685}
+  m_Offset: {x: 0.03221655, y: -0.56155443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1.25}
-    newSize: {x: 1, y: 1.25}
+    newSize: {x: 3, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0041423, y: 1.242856}
+  m_Size: {x: 0.81444883, y: 0.12689114}
   m_EdgeRadius: 0
 --- !u!50 &1186001031355672671
 Rigidbody2D:
@@ -172,9 +172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe7024308bf728439c2e7fee6d6eb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSpriteRenderer: {fileID: 6946601901256425443}
-  garconSprite: {fileID: 0}
-  filleSprite: {fileID: 0}
+  tf: {fileID: 0}
+  movement: {x: 0, y: 0}
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  defaultSpriteSheetName: 
 --- !u!95 &4281233399330700182
 Animator:
   serializedVersion: 4

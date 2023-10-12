@@ -81,13 +81,13 @@ public class PlayerAppearance : MonoBehaviour
     public void animationUpdate()
     {
         animator.SetFloat("speed", Mathf.Abs(movement.x) + Mathf.Abs(movement.y));
-        if (movement.x > 0 && Mathf.Abs(movement.y) < Mathf.Abs(movement.x))
+        if (movement.x > 0)
             animator.SetInteger("orientation", 6);
-        else if (movement.x < 0 && Mathf.Abs(movement.y) < Mathf.Abs(movement.x))
+        else if (movement.x < 0)
             animator.SetInteger("orientation", 2);
         else if (movement.y > 0)
             animator.SetInteger("orientation", 0);
-        else if (movement.y < 0 || (movement.x == 0 && movement.y == 0))
+        else
             animator.SetInteger("orientation", 4);
     }
 

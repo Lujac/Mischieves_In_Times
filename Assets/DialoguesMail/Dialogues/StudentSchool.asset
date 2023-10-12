@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: StudentSchool
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "-2/20, c\u2019est possible \xE7a en anglais ? "
-  - " L\u2019\xE8re victorienne\u2026 pfff\u2026 C\u2019\xE9tait le si\xE8cle dernier
-    ! Ou non, c\u2019\xE9tait avant\u2026 Je commence \xE0 voir pourquoi j'ai eu
-    -2"
+  - "Comment c'est possible que j'ai eu -2/20 en anglais aujourd'hui...? Pourtant,
+    je suis pas si nul que \xE7a !"
+  - "L\u2019\xE8re victorienne\u2026 pfff\u2026 C\u2019\xE9tait le si\xE8cle dernier
+    ! Ou non, c\u2019\xE9tait avant\u2026?"
+  - "Euh... Je commence \xE0 voir pourquoi j'ai eu -2... Bah, je m'ennuie, je vais
+    me balader un peu dans le coin."
+  - "- <i>Appuyez sur les fl\xE8ches pour pour d\xE9placer</i> -"
   characterNames:
   - 
   - 
+  - 
+  - Tutoriel

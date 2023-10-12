@@ -43,12 +43,6 @@ public class PlayerControl : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
 
         }
-       
-        else
-        {
-            movementEnabled = false;
-           
-        }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -86,6 +80,10 @@ public class PlayerControl : MonoBehaviour
         if (walkableTilemap.HasTile(walkableTilemap.WorldToCell(newPosition)))
         {
             rb.MovePosition(newPosition);
+        } 
+        else 
+        {
+            Debug.Log("TRUC");
         }
         
     }

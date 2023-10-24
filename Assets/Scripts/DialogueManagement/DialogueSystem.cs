@@ -11,7 +11,7 @@ public class DialogueSystem : MonoBehaviour
     // References aux elements d'interface utilisateur utilises pour afficher le dialogue et les caracteres associes.
     public TextMeshProUGUI dialogueText, charaname;
     public DialogueData[] dialogueDatas; // Liste des DialogueData disponibles
-    public int dialogueNumber = 0;
+    private int dialogueNumber = 0;
     public Image BoiteDialogue, BoiteChara;
 
     // Indice pour suivre la ligne de dialogue actuelle.

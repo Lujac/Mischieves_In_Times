@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
     public Tilemap walkableTilemap;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5.5f;
     private Vector2 movement;
     public static PlayerControl agentMovementInstance;
     public Rigidbody2D rb;
     public bool isActive, tabIsActive, dialIsActive, movementEnabled;
     public List<int> numAlbum = new List<int>();
     static List<int> numAlbumStatic = new List<int>();
-    [SerializeField] float speedWalk;
     [SerializeField] GameObject tablette, btnTab;
 
     private void Awake()
@@ -54,6 +54,8 @@ public class PlayerControl : MonoBehaviour
 
     public void TabOpen() { 
         //Activation tablette
+
+        if(SceneManager.GetActiveScene().name == "Introduction") return;
         
         if(!dialIsActive){
             
@@ -62,15 +64,12 @@ public class PlayerControl : MonoBehaviour
             isActive = !tabIsActive;
 
         }
-            
-        
-        
+
         if (tabIsActive)
         {
             btnTab.GetComponent<Animator>().SetBool("notif", false);
             isActive = false;
         }
-
     }
 
     private void FixedUpdate()

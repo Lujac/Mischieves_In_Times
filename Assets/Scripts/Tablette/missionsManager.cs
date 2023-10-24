@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using static DialogueScientist;
 
 public class missionsManager : MonoBehaviour
 {
@@ -28,7 +27,7 @@ public class missionsManager : MonoBehaviour
     public MissionsList data;
     private void Awake()
     {
-        //Une seule instance dans la scène
+        //Une seule instance dans la scï¿½ne
         if (missionManagerInstance != null)
         {
             Debug.Log("Il y a plus d'une instance de playerMovement dans la scene");

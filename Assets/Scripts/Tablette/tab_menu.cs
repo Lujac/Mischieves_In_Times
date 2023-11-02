@@ -50,10 +50,12 @@ public class tab_menu : MonoBehaviour
     }
     public void CloseTab(GameObject windows)
     {
+        // Clic sur la croix
+        
         windows.SetActive(false);
         PlayerControl.agentMovementInstance.tabIsActive = false;
         PlayerControl.agentMovementInstance.isActive = true;
-        // PlayerControl.agentMovementInstance.EnableMovemment();
+        PlayerControl.agentMovementInstance.EnableMovemment();
     }
 
     public void notifbtnOn(int i) {

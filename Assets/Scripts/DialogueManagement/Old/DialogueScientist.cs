@@ -11,7 +11,7 @@ using static DialogueScientist;
 public class DialogueScientist : MonoBehaviour
 {
     [SerializeField]
-    GameObject prefabMailScientist, prefabMailPlayer, parentMail, verticalScroll, pressEspace, mycroft, timeMachine;
+    GameObject prefabMailScientist, prefabMailPlayer, parentMail, verticalScroll, pressEspace/* , mycroft, timeMachine */;
     [SerializeField]
     public int numDial = -1;
     int posYDial = -50;
@@ -63,24 +63,29 @@ public class DialogueScientist : MonoBehaviour
             data.scientistDialogue2[i].text = data.scientistDialogue2[i].text.Replace("nomJoueur", namePlayer);
             data.scientistDialogue2[i].name = data.scientistDialogue2[i].name.Replace("nomJoueur", namePlayer);
         }
+
         //Desactivation mycroft parceque pas besoin de le voir tous de suite
-        mycroft.SetActive(false);
+        /* mycroft.SetActive(false); */
     }
     private void Start()
     {
         numDial = 0;
         pressEspace.SetActive(true);
-        //Affichage du premier dialogue quand script activer au début
+        //Affichage du premier dialogue quand script activer au dï¿½but
         Display(numDial, data.scientistDialogue0);
     }
     // Update is called once per frame
     void Update()
     {
-        
+        /* 
         //Changement de phrase de dialogue en fonction du numero du dialogue sur lequel on est
         if (Input.GetKeyDown(KeyCode.Space))
         {
             verticalScroll.GetComponent<Scrollbar>().value = 0;
+
+            Debug.Log("test");
+            Debug.Log(nbDialogue);
+
             switch (nbDialogue)
             {
                 case 0:
@@ -88,6 +93,7 @@ public class DialogueScientist : MonoBehaviour
                     break;
                 case 1:
                     Display(numDial + 1, data.scientistDialogue1);
+                    Debug.Log(mycroft);
                     mycroft.GetComponent<DialogueMycroft>().isMoving = true; //mycroft arrive et se rapproche du joueur pendant se dialogue 
                     mycroft.SetActive(true);
                     break;
@@ -95,7 +101,8 @@ public class DialogueScientist : MonoBehaviour
                     Display(numDial + 1, data.scientistDialogue2);
                     break;
             }
-        }
+        } 
+        */
     }
     //fonction pour afficher un nouveau dialogue
     public void Display(int idtxt, ScientistDialogue[] nameDialogue)
@@ -124,11 +131,11 @@ public class DialogueScientist : MonoBehaviour
             if (nameDialogue[numDial].isEnd)
             {
                 pressEspace.SetActive(false);
-                if (nbDialogue == 0)
+                /* if (nbDialogue == 0)
                 {
                     timeMachine.GetComponent<BoxCollider2D>().enabled = true;
                     missionsManager.missionManagerInstance.AddMission(0);
-                }
+                } */
             }
             else
             {

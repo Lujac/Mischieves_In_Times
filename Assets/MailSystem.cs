@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class MailSystem : MonoBehaviour
 {
-    public GameObject prefabMailScientist; // Prefab du MailScientist à instancier à certains moments
-    public GameObject prefabMailPlayer; // Prefab du MailPlayer à instancier à certains moments
-    public GameObject parentMail; // L'endroit où les prefabs doivent être instanciés
+    public GameObject prefabMailScientist; // Prefab du MailScientist ï¿½ instancier ï¿½ certains moments
+    public GameObject prefabMailPlayer; // Prefab du MailPlayer ï¿½ instancier ï¿½ certains moments
+    public GameObject parentMail; // L'endroit oï¿½ les prefabs doivent ï¿½tre instanciï¿½s
     public GameObject pressEspace;
     public GameObject verticalScroll;
     public List<MailData> MailList; // Modifier le type de DialogueList en List<DialogueData>
@@ -14,27 +14,27 @@ public class MailSystem : MonoBehaviour
     private int currentLineIndex;
     private int currentMailIndex = 0;
     private int posYDial = 0;
-    private static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
+    private static bool dialogueInProgress = false; // Ajouter la dï¿½claration de la variable dialogueInProgress
     private bool Mailinprogress = false;
     private bool MailEnd = false;
     
 
     void Start()
     {
-        // Vérifier si un autre dialogue est déjà en cours
+        // Vï¿½rifier si un autre dialogue est dï¿½jï¿½ en cours
         if (dialogueInProgress)
         {
-            // Ignorer le démarrage du dialogue si un autre dialogue est déjà en cours
+            // Ignorer le dï¿½marrage du dialogue si un autre dialogue est dï¿½jï¿½ en cours
             return;
         }
 
         // Activer ce DialogueSystem comme le DialogueSystem actif
         dialogueInProgress = true;
 
-        // Récupérer le nom du joueur dans les playerprefs "PlayerPrefs.GetString("SelectedCharacter");"
+        // Rï¿½cupï¿½rer le nom du joueur dans les playerprefs "PlayerPrefs.GetString("SelectedCharacter");"
         // pour l'attribuer comme valeur aux valeurs characternames[] de ma classe DialogueData lorsque la valeur est vide
 
-        currentLineIndex = 0; // Initialiser currentLineIndex à 0
+        currentLineIndex = 0; // Initialiser currentLineIndex ï¿½ 0
 
         DisplayDialogue();
     }
@@ -61,14 +61,14 @@ public class MailSystem : MonoBehaviour
 
         }
 
-        // Si la touche espace est enfoncée et qu'il n'y a pas de dialogue en cours
+        // Si la touche espace est enfoncï¿½e et qu'il n'y a pas de dialogue en cours
         if (Input.GetKeyDown(KeyCode.Space) && dialogueInProgress)
         {
             
-            // Si currentLineIndex est inférieur à la taille du tableau dialogueLines pour le dialogue actuel
+            // Si currentLineIndex est infï¿½rieur ï¿½ la taille du tableau dialogueLines pour le dialogue actuel
             if (currentLineIndex < MailList[DialogueNumber].dialogueLines.Length - 1)
             {
-                currentLineIndex++; // Augmenter currentLineIndex pour passer à la prochaine ligne du dialogue
+                currentLineIndex++; // Augmenter currentLineIndex pour passer ï¿½ la prochaine ligne du dialogue
                 currentMailIndex++;
                 DisplayDialogue();
                 
@@ -77,6 +77,7 @@ public class MailSystem : MonoBehaviour
             {
                 Mailinprogress= false;
                 MailEnd = true;
+                dialogueInProgress = false;
             }
             
         }

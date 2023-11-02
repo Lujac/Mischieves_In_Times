@@ -55,16 +55,6 @@ public class DialogueSystem : MonoBehaviour
         {
             ContinueDialogue();
         }
-
-        // Desactiver le controle du personnage du joueur si la boite de dialogue est active, sinon l'activer.
-        if (BoiteDialogue.gameObject.activeSelf)
-        {
-            playerControl.DisableMovemment();
-        }
-        else
-        {
-            playerControl.EnableMovemment();
-        }
     }
 
     // Methode pour demarrer le dialogue.
@@ -76,17 +66,17 @@ public class DialogueSystem : MonoBehaviour
             // Ignorer le d�marrage du dialogue si un autre dialogue est d�j� en cours
             return;
         }
-
-        // V�rifier si le num�ro de dialogue est valide
         
 
         // Activer ce DialogueSystem comme le DialogueSystem actif
         activeDialogueSystem = this;
         dialogueInProgress = true;
+
         if (playerControl != null)
-{
-    playerControl.dialIsActive = true; // Accédez à dialIsActive via l'instance playerControl
-}
+        {
+            playerControl.dialIsActive = true; // Accédez à dialIsActive via l'instance playerControl
+            playerControl.DisableMovemment();
+        }
        
 
 
@@ -175,9 +165,10 @@ public class DialogueSystem : MonoBehaviour
             // Si c'est la derni�re ligne du dialogue, masquer les �l�ments d'interface du dialogue.
             dialogueInProgress = false; // Aucun dialogue en cours
             if (playerControl != null)
-{
-    playerControl.dialIsActive = false; // Accédez à dialIsActive via l'instance playerControl
-}
+            {
+                playerControl.dialIsActive = false; // Accédez à dialIsActive via l'instance playerControl
+                playerControl.EnableMovemment();
+            }
       
             dialogueText.gameObject.SetActive(false);
             BoiteDialogue.gameObject.SetActive(false);

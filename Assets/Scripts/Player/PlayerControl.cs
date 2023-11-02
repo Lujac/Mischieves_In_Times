@@ -41,15 +41,15 @@ public class PlayerControl : MonoBehaviour
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
-
+        } else {
+            movement.x = 0;
+            movement.y = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
             TabOpen();
         }
-       
-
     }
 
     public void TabOpen() { 
@@ -58,11 +58,9 @@ public class PlayerControl : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Introduction") return;
         
         if(!dialIsActive){
-            
             tabIsActive = !tabIsActive;
             tablette.SetActive(tabIsActive);
             isActive = !tabIsActive;
-
         }
 
         if (tabIsActive)
@@ -70,12 +68,15 @@ public class PlayerControl : MonoBehaviour
             btnTab.GetComponent<Animator>().SetBool("notif", false);
             isActive = false;
         }
+        
+        movementEnabled = !movementEnabled;
     }
 
     private void FixedUpdate()
     {
         Vector2 newPosition = rb.position + movement * moveSpeed * Time.deltaTime;
         movement.Normalize(); // Pour s'assurer que le personnage se d�place � la m�me vitesse dans toutes les directions
+        
         // if (walkableTilemap.HasTile(walkableTilemap.WorldToCell(newPosition)))
         // {
         //     rb.MovePosition(newPosition);
@@ -84,8 +85,8 @@ public class PlayerControl : MonoBehaviour
         // {
         //     Debug.Log("TRUC");
         // }
-            rb.MovePosition(newPosition);
-        
+            
+        rb.MovePosition(newPosition);
     }
 
     public void SaveInfo() //Enregistrer les infos du joueur
@@ -110,13 +111,11 @@ public class PlayerControl : MonoBehaviour
 
     public void EnableMovemment()
     {
-
         movementEnabled = true;
     }
 
     public void DisableMovemment()
     {
-
         movementEnabled = false;
     }
 }

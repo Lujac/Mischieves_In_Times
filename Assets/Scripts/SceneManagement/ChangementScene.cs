@@ -5,18 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangementScene : MonoBehaviour
 {
-    [SerializeField]
-    GameObject aAfficher;
-    // Start is called before the first frame update
+    [SerializeField] GameObject aAfficher;
+
+    [SerializeField] string strSceneSortie;
+    enum Directions {Haut, Bas, Gauche, Droite}
+    [SerializeField] Directions directionSortie;
+
     void Start()
     {
         aAfficher.SetActive(false);
-    }
-
-    public void ChangeScene(string name)
-    {
-      PlayerControl.agentMovementInstance.SaveInfo();
-        SceneManager.LoadScene(name);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +28,32 @@ public class ChangementScene : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            checkExit(collision.transform.position);
             aAfficher.SetActive(false);
+        }
+    }
+
+    private void checkExit(Vector3 playerPosition)
+    {
+        if (strSceneSortie == SceneManager.GetActiveScene().name) {
+            Debug.Log("Changement de scène vers celle déjà présente");
+            return;
+        }
+
+        // Debug.Log(playerPosition);
+        // Debug.Log(transform.position);
+        // Debug.Log(transform.localScale);
+        
+        // playerPosition > x ou y du trigger pour le côté choisi
+
+        if(
+            (directionSortie == Directions.Haut && playerPosition.y <= transform.position.y + transform.localScale.y / 2) ||
+            (directionSortie == Directions.Bas && playerPosition.y <= transform.position.y - transform.localScale.y / 2) ||
+            (directionSortie == Directions.Gauche && playerPosition.x <= transform.position.x - transform.localScale.x / 2) ||
+            (directionSortie == Directions.Droite && playerPosition.x >= transform.position.x + transform.localScale.x / 2)
+          ) {
+            PlayerControl.agentMovementInstance.SaveInfo();
+            SceneManager.LoadScene(strSceneSortie);
         }
     }
 }

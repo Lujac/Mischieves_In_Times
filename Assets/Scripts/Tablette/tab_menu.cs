@@ -6,12 +6,9 @@ using Unity.VisualScripting;
 
 public class tab_menu : MonoBehaviour
 {
-    [SerializeField]
-    List<GameObject> appList = new List<GameObject>();
-    [SerializeField]
-    List<GameObject> btnList = new List<GameObject>();
-    [SerializeField]
-    GameObject txtPlayerName;   
+    [SerializeField] List<GameObject> appList = new List<GameObject>();
+    [SerializeField] List<GameObject> btnList = new List<GameObject>();
+    [SerializeField] GameObject txtPlayerName;   
     public List<bool> notifbtn = new List<bool>(); //0 tabMap, 1 tab Inventaire, 2 tab missions, 3 tab Album, 4 tab Journal, 5 tab Mail
     private void Awake()
     {
@@ -20,7 +17,7 @@ public class tab_menu : MonoBehaviour
         {
             notifbtn.Add(false);
         }
-        //Une seule instance dans la scène
+        //Une seule instance dans la scï¿½ne
         
     }
     // Start is called before the first frame update
@@ -54,8 +51,9 @@ public class tab_menu : MonoBehaviour
     public void CloseTab(GameObject windows)
     {
         windows.SetActive(false);
-        PlayerControl.agentMovementInstance.tabIsActive= false;
+        PlayerControl.agentMovementInstance.tabIsActive = false;
         PlayerControl.agentMovementInstance.isActive = true;
+        // PlayerControl.agentMovementInstance.EnableMovemment();
     }
 
     public void notifbtnOn(int i) {

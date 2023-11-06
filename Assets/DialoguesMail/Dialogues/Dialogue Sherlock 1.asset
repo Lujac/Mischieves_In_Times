@@ -22,16 +22,15 @@ MonoBehaviour:
   - "Mais bien s\xFBr, ma grand-m\xE8re \xE9tait fran\xE7aise. But now, what do you
     want? I\u2019m a very busy man."
   - "I\u2019m here to collect a pipe."
-  - "But I\u2019m not a plumber."
+  - "But... I\u2019m not a plumber."
   - No, the golden pipe.
-  - I'm Still not a plumber, let alone a fancy one.
+  - I'm still not a plumber, let alone a fancy one.
   - 'What are you talking about? '
   - "What are YOU talking about? I told you, I\u2019m a private detective, not a
     plumber !"
-  - "I know you\u2019re not a plumber. But I\u2019m not talking about that type of
+  - "I know you\u2019re not a plumber, but I\u2019m not talking about that type of
     pipe. "
-  - Does my brother want to take up music (=to adopt the study, practice, or an activity)
-    then?
+  - Does my brother want to take up music then?
   characterNames:
   - 
   - Sherlock Holmes

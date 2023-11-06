@@ -425,6 +425,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c41afb14c7ba9c54c9d8c1310e2214e3, type: 3}
+--- !u!114 &165717692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7528648820099702209, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+  m_PrefabInstance: {fileID: 1343118233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &165717693 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1825979486020102238, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+  m_PrefabInstance: {fileID: 1343118233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &165717694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5683320787564862337, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+  m_PrefabInstance: {fileID: 1343118233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &188795891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5475031910815857251, guid: c629e8a787f0491489985340c2b740ce, type: 3}
@@ -12557,6 +12590,17 @@ RectTransform:
   m_AnchoredPosition: {x: 607.225, y: 100}
   m_SizeDelta: {x: 609.55, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1066175009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6523670110370122747, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+  m_PrefabInstance: {fileID: 1343118233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbacd8fd33f33a9438a8c55d652d99e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1262041210
 GameObject:
   m_ObjectHideFlags: 0
@@ -15252,6 +15296,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2027480687279071278, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+      propertyPath: m_Name
+      value: NormalTextWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027480687279071278, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -15333,12 +15381,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3403601274323437747, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3403601274323437747, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1919833238}
     - target: {fileID: 3403601274323437747, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[1]
       value: 
@@ -15432,6 +15480,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5475031910815857251, guid: c629e8a787f0491489985340c2b740ce, type: 3}
+      propertyPath: m_Name
+      value: DefTextWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475031910815857251, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -15445,12 +15497,12 @@ PrefabInstance:
       objectReference: {fileID: 1876289306}
     - target: {fileID: 7434493669890281736, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7434493669890281736, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1919833238}
     - target: {fileID: 7434493669890281736, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[1]
       value: 
@@ -15570,7 +15622,7 @@ PrefabInstance:
     - target: {fileID: 8366210057257398390, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1066175009}
     - target: {fileID: 8366210057257398390, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -15602,7 +15654,7 @@ PrefabInstance:
     - target: {fileID: 8568668981454320651, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1066175009}
     - target: {fileID: 8568668981454320651, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -15649,12 +15701,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204026739912586790, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9204026739912586790, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1919833238}
     - target: {fileID: 9204026739912586790, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: dialogueSystems.Array.data[1]
       value: 
@@ -15857,6 +15909,7 @@ GameObject:
   - component: {fileID: 1362493130}
   - component: {fileID: 1362493129}
   - component: {fileID: 1362493128}
+  - component: {fileID: 1362493131}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -15914,6 +15967,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1362493131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362493127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbacd8fd33f33a9438a8c55d652d99e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1356420764}
+  charaname: {fileID: 710210082}
+  dialogueDatas: []
+  BoiteDialogue: {fileID: 798407114}
+  BoiteChara: {fileID: 807607416}
+  playerControl: {fileID: 1876289306}
+  customBoldWords: []
+  EyeButtonImage: {fileID: 1270888222}
+  EyeButton: {fileID: 641888608}
+  EyeClosed: {fileID: 21300000, guid: 043309530637ad845b118b9b4d119edb, type: 3}
+  EyeOpen: {fileID: 21300000, guid: 75acc72821f46d94ea3e45bb07ec6057, type: 3}
+  Outside: {fileID: 451666762}
+  Inside: {fileID: 188795891}
+  boldWordsTexts:
+  - {fileID: 165717694}
+  - {fileID: 165717693}
+  - {fileID: 165717692}
+  inSpecialBox: 0
+  wordDefinitions: []
 --- !u!1 &1372631500
 GameObject:
   m_ObjectHideFlags: 0
@@ -17889,14 +17973,19 @@ MonoBehaviour:
   BoiteDialogue: {fileID: 798407114}
   BoiteChara: {fileID: 807607416}
   playerControl: {fileID: 1876289306}
-  customBoldWords: []
+  customBoldWords:
+  - plumber
+  - to take up music
   EyeButtonImage: {fileID: 1270888222}
   EyeButton: {fileID: 641888608}
   EyeClosed: {fileID: 21300000, guid: 043309530637ad845b118b9b4d119edb, type: 3}
   EyeOpen: {fileID: 21300000, guid: 75acc72821f46d94ea3e45bb07ec6057, type: 3}
   Outside: {fileID: 451666762}
   Inside: {fileID: 188795891}
-  boldWordsTexts: []
+  boldWordsTexts:
+  - {fileID: 165717694}
+  - {fileID: 165717693}
+  - {fileID: 165717692}
   inSpecialBox: 0
   wordDefinitions:
   - word: plumber

@@ -31,9 +31,32 @@ MonoBehaviour:
   - My pocket watch ? It is not a vulgar clock! Why would it help you?
   - It's from the machine. I need it. Otherwise, I will stay here.
   - ...
-  - You shall have it, but in one condition. Give this pipe to my dear brother. You
-    will find him at 221B Baker Street. Come back here afterwards, I will then give
-    it to you.
+  - "You shall have it, but on one condition. Go find my brother and ask him to give
+    me back my golden pipe, it\u2019s an inheritance that I\u2019m very attached
+    to."
+  - You will find him at 221B Baker Street. Come back here afterwards, I will get
+    you home.
+  - Sir, how can you trust that person? We know nothing about them!
+  - "If I have gardening questions I\u2019ll ask your opinion, now pipe down!"
+  - Where? Is there a pipe on the ground?
+  - "What are you talking about? There is no pipe on the ground, the pipe I want
+    is at my brother\u2019s flat."
+  - "But you just said \u201CPipe down\u201D, if there is no pipe on the ground,
+    then what does it mean?"
+  - "Oh, I see your confusion! \u201CPipe down\u201D doesn\u2019t mean that there
+    is a pipe on the ground, it is a turn of phrase, I asked him to be quiet."
+  - Now, I understand why I got -2 in English...
+  - "Well then, I\u2019ll try to keep it simple now. Can\u2026 you go\u2026 and get\u2026
+    the pipe\u2026 from\u2026 my brother\u2026?"
+  - "It was a historical test in English, I understand you when you speak\u2026 "
+  - Then it should be a lead-pipe cinch task for you.
+  - Another pipe? When I say I understand, I mean that I understand easy words. What
+    does that one mean, please?
+  - Sorry, sorry. It means that it should be easy for you, a piece of cake if you
+    prefer.
+  - 'I know that one! '
+  - "Great! Then, good luck my friend. My brother can be quite\u2026 Anyway, you\u2019ll
+    see. Goodbye."
   characterNames:
   - "???\t"
   - "???\t"
@@ -53,4 +76,19 @@ MonoBehaviour:
   - ???
   - 
   - ???
+  - ???
+  - ???
+  - Roger
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
+  - ???
+  - 
   - ???

@@ -215,9 +215,10 @@ public class DialogueSystem : MonoBehaviour
             // V�rifier si le mot est pr�sent dans la ligne de dialogue.
             if (text.Contains(word))
             {
-                // Rechercher toutes les occurrences du mot dans la ligne de dialogue.
+                // Rechercher la 1ère occurrence du mot dans la ligne de dialogue.
                 int startIndex = 0;
-                while (startIndex < text.Length)
+                bool wordFound = false;
+                while (startIndex < text.Length && !wordFound)
                 {
                     int wordIndex = text.IndexOf(word, startIndex, StringComparison.OrdinalIgnoreCase);
                     if (wordIndex == -1)
@@ -238,7 +239,7 @@ public class DialogueSystem : MonoBehaviour
                         }
                     }
 
-                    startIndex = wordIndex + boldText.Length;
+                    wordFound = true;
                 }
             }
         }

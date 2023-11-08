@@ -21,8 +21,7 @@ public class WordButtonHandler : MonoBehaviour
             foreach (DialogueSystem dialogueSystem in dialogueSystems)
             {
                 WordDefinition wordDefinition = dialogueSystem.GetWordDefinition(word);
-
-                if (wordDefinition != null)
+                if (wordDefinition != null) 
                 {
                     definitionText.text = wordDefinition.definition;
                     wordImage.sprite = wordDefinition.sprite;
@@ -30,18 +29,15 @@ public class WordButtonHandler : MonoBehaviour
                     definitionText.gameObject.SetActive(true);
                     wordImage.gameObject.SetActive(true);
 
-                    // Vérifier s'il y a une image et du texte dans WordDefinition
+                    // Vï¿½rifier s'il y a une image ou du texte dans WordDefinition
                     if (wordDefinition.sprite != null && !string.IsNullOrEmpty(wordDefinition.definition))
                     {
-                        // Appliquer l'alignement et le style de texte spécifié
+                        // Appliquer l'alignement et le style de texte spï¿½cifiï¿½
                         definitionText.alignment = TextAlignmentOptions.Bottom;
                         definitionText.fontStyle = FontStyles.Bold;
                     }
-                    else
-                    {
-                        
-                    }
                 }
+
             }
         }
     }

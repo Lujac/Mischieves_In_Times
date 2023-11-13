@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1648350ee316640b6ef909a334c1d5, type: 3}
+  m_Name: Dialogue Sherlock 2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - 'What is that machine you just used? '
+  - "It\u2019s a technological thing, you\u2019ll understand later. That is the one
+    I want! I need the pipe that you use to smoke tobacco, the golden one."
+  - Oh my family inheritance?
+  - "Yes, that\u2019s what Mycroft said, your family inherit-something."
+  - "Well, you\u2019re out of luck. I\u2019ve just got robbed, and the only thing
+    they took, was the golden pipe."
+  - Oh no! I need it to go back home!
+  - ' I was about to investigate and find the filthy thief who did this. Would you
+    like to be my assistant on this investigation? Your flat technological thingy
+    could help.'
+  - "To solve a case with Sherlock Holmes? What an honour! Maybe, I\u2019ll be the
+    one who solves the investigation."
+  - "Well, if you find the culprit first, I\u2019ll eat my hat!"
+  - Why would you eat such a nice hat?
+  - ??
+  characterNames:
+  - Sherlock Holmes
+  - 
+  - Sherlock Holmes
+  - 
+  - Sherlock Holmes
+  - 
+  - Sherlock Holmes
+  - 
+  - Sherlock Holmes
+  - 
+  - Sherlock Holmes

@@ -10,6 +10,6 @@ public class tab_Dico : MonoBehaviour
     {
         if(!SherlockState) SherlockState = GameObject.Find("PNJ_Sherlock").GetComponent<CharacterSherlockBehavior>();
         
-        Debug.Log(SherlockState.DialogueSherlockGreetCompleted);
+        // Debug.Log(SherlockState.DialogueSherlockGreetCompleted);
     }
 }

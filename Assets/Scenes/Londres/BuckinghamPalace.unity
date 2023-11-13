@@ -33994,19 +33994,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
       propertyPath: m_Size.x
-      value: 0.84478045
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
       propertyPath: m_Size.y
-      value: 0.44537067
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
       propertyPath: m_Offset.x
-      value: 0.047382116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
       propertyPath: m_Offset.y
-      value: -0.40231466
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186001031355672656, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1186001031355672658, guid: 6bf075dc3176aaa448b77451266404ab, type: 3}
       propertyPath: m_RootOrder
@@ -34224,7 +34236,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.47190177, y: -0.17287254}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -34235,7 +34247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0980306, y: 3.4202232}
+  m_Size: {x: 2.3, y: 3}
   m_EdgeRadius: 0
 --- !u!61 &1783994074
 BoxCollider2D:
@@ -34410,7 +34422,10 @@ MonoBehaviour:
   dialogueSystem: {fileID: 1783994078}
   targetTransform: {fileID: 1949498626}
   speed: 5
-  Mail: {fileID: 850422115}
+  tabMail: {fileID: 850422115}
+  btnTab: {fileID: 268054123}
+  tabMenu: {fileID: 452163375}
+  TimeMachine: {fileID: 1985369961}
 --- !u!1 &1784359339
 GameObject:
   m_ObjectHideFlags: 0
@@ -37754,9 +37769,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1985369962}
   - component: {fileID: 1985369963}
-  - component: {fileID: 1985369965}
   - component: {fileID: 1985369966}
   - component: {fileID: 1985369967}
+  - component: {fileID: 1985369965}
   m_Layer: 0
   m_Name: timeMachine
   m_TagString: Untagged
@@ -37844,7 +37859,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9647999, y: -0.62566996}
+  m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -37855,7 +37870,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.197659, y: 10.206031}
+  m_Size: {x: 13, y: 13}
   m_EdgeRadius: 0
 --- !u!114 &1985369966
 MonoBehaviour:

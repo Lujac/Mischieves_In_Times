@@ -15,6 +15,9 @@ MonoBehaviour:
   dialogueLines:
   - "Bonjour monsieur, excusez-moi, mais o\xF9 suis-je ?"
   - GUARDS !!! There is an intruder in Buckingam Palace ! Help !
+  - "<i>Vous avez re\xE7u un message ! Appuyez sur <b>T</b> pour ouvrir la tablette,
+    puis cliquez sur le menu <b>Mail</b>.</i>"
   characterNames:
   - 
   - Roger, The Gardener
+  - Tutoriel

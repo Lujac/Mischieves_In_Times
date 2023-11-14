@@ -39,7 +39,7 @@ public class Drag_Drop : MonoBehaviour, IDragHandler, IEndDragHandler
         if(rb.IsTouching(transform.parent.gameObject.GetComponent<BoxCollider2D>())) {
             // Si l'objet touche le parent, bloquer l'élément au bon endroit
             placed = true;
-            transform.localPosition = new Vector3(400f, 0f, 0f);
+            transform.localPosition = new Vector3(350, 0, 0);
             
             puzzleDico.SetDefBool(defNumber);
             

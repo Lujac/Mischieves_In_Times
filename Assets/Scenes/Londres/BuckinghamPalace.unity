@@ -1096,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766979727856268909, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1159.4323
+      value: 1160
       objectReference: {fileID: 0}
     - target: {fileID: 7766979727856268909, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -1144,7 +1144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766979727856268909, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 579.71606
+      value: 580
       objectReference: {fileID: 0}
     - target: {fileID: 7766979727856268909, guid: c629e8a787f0491489985340c2b740ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10667,6 +10667,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01bbd4f3c04f6db459577f7f8142b3cd, type: 2}
   - {fileID: 11400000, guid: 466c51750b6c02c4e8cc7b28b64b0522, type: 2}
   DialogueNumber: 0
+  currentLineIndex: 0
+  currentMailIndex: 0
+  posYDial: 0
+  Mailinprogress: 0
+  MailEnd: 0
 --- !u!1 &863881886
 GameObject:
   m_ObjectHideFlags: 0
@@ -37886,7 +37891,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabMail: {fileID: 850422115}
   btnTab: {fileID: 268054123}
-  btnMail: {fileID: 1310060611}
   tab: {fileID: 452163375}
 --- !u!58 &1985369967
 CircleCollider2D:

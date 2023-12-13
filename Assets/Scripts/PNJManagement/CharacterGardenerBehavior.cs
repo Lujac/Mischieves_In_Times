@@ -21,6 +21,8 @@ public class CharacterGardenerBehavior : CharacterBehavior
  
         tabMail.GetComponent<MailSystem>().enabled = true; // Mails activés après ce dialogue
         TimeMachine.GetComponent<BoxCollider2D>().enabled = true; // Active l'interaction avec la Time Machine
+
+        DisableDialog();
     }
 
     private IEnumerator MoveToTarget()
@@ -33,5 +35,18 @@ public class CharacterGardenerBehavior : CharacterBehavior
 
         isMoving = false;
         // Destroy(gameObject);
+    }
+
+    /* Disables only the dialog trigger collider */
+    private void DisableDialog()
+    {
+        BoxCollider2D[] boxCollider2Ds = GetComponents<BoxCollider2D>();
+
+        foreach (BoxCollider2D collider in boxCollider2Ds)
+        {
+            if(collider.isTrigger) collider.enabled = false;
+        }
+
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }

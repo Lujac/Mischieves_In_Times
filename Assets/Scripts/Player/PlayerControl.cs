@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerControl : MonoBehaviour
     public List<int> numAlbum = new List<int>();
     static List<int> numAlbumStatic = new List<int>();
     [SerializeField] GameObject tablette, btnTab;
+    
+    public enum Directions {Haut, Bas, Gauche, Droite}
 
     private void Awake()
     {

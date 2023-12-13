@@ -17,6 +17,7 @@ public class MailSystem : MonoBehaviour
     public static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
     public bool Mailinprogress = false;
     public bool MailEnd = false;
+    // public int DialogAvailable = 0;
     
 
     void OnEnable()

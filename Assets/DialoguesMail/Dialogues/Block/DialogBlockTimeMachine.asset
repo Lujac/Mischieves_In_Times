@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b1648350ee316640b6ef909a334c1d5, type: 3}
-  m_Name: Dialogue Gardener
+  m_Name: DialogBlockTimeMachine
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Bonjour monsieur, excusez-moi, mais o\xF9 suis-je ?"
-  - GUARDS !!! There is an intruder in Buckingam Palace ! Help !
   - <i>You've got mail ! Press <b>T</b> to open the tablet, then click on the <b>Mail</b>
     button.</i>
   characterNames:
-  - 
-  - Roger, The Gardener
   - Tutorial

@@ -47,7 +47,7 @@ public class DialogueSystem : MonoBehaviour
     // Evenement d�clenche a la fin du dialogue.
     public event Action OnDialogueEnd;
     // Remove the block when the corresponding dialog is completed
-    public GameObject blockToRemove = null;
+    public GameObject blockToRemove;
 
     // Methode appelee a chaque frame.
     private void Update()

@@ -17,7 +17,6 @@ public class MailSystem : MonoBehaviour
     public static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
     public bool Mailinprogress = false;
     public bool MailEnd = false;
-    // public int DialogAvailable = 0;
     
 
     void OnEnable()
@@ -69,8 +68,20 @@ public class MailSystem : MonoBehaviour
                 Mailinprogress = false;
                 MailEnd = true;
                 dialogueInProgress = false;
+
+                MailData dialogueData = MailList[DialogueNumber];
+
+                if (dialogueData.name == "Scientist01")
+                {
+                    GameObject blockTimeMachine = transform.Find("/BlockTimeMachine").gameObject;
+                    blockTimeMachine.SetActive(false);
+                } else if (dialogueData.name == "Scientist02")
+                {
+                    GameObject PNJ_mycroft = transform.Find("/PNJ/PNJ_mycroft").gameObject;
+                    CharacterMycroftBehavior MycroftBehavior = PNJ_mycroft.GetComponent<CharacterMycroftBehavior>();
+                    MycroftBehavior.TriggerMovement();
+                }
             }
-            
         }
     }
 

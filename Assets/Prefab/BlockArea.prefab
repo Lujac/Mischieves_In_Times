@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1382282039633213836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382282039633213833}
+  - component: {fileID: 1382282039633213838}
+  - component: {fileID: 1382282039633213839}
+  - component: {fileID: 1382282039633213832}
+  m_Layer: 0
+  m_Name: BlockArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382282039633213833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382282039633213836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.59, y: -15.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1382282039633213838
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382282039633213836}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4650364, y: -0.2777319}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.5686913, y: 0.4445362}
+  m_EdgeRadius: 0
+--- !u!114 &1382282039633213839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382282039633213836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054d08e4e5f179e459f8805544b7fd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionBlock: 1
+  dialogBlock: {fileID: 1382282039633213832}
+  distanceToMove: 0.3
+--- !u!114 &1382282039633213832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382282039633213836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbacd8fd33f33a9438a8c55d652d99e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  charaname: {fileID: 0}
+  dialogueDatas:
+  - {fileID: 0}
+  BoiteDialogue: {fileID: 0}
+  BoiteChara: {fileID: 0}
+  playerControl: {fileID: 0}
+  customBoldWords: []
+  EyeButtonImage: {fileID: 0}
+  EyeButton: {fileID: 0}
+  EyeClosed: {fileID: 21300000, guid: 043309530637ad845b118b9b4d119edb, type: 3}
+  EyeOpen: {fileID: 21300000, guid: 75acc72821f46d94ea3e45bb07ec6057, type: 3}
+  Outside: {fileID: 0}
+  Inside: {fileID: 0}
+  boldWordsTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  inSpecialBox: 0
+  wordDefinitions: []
+  blockToRemove: {fileID: 0}

@@ -11,7 +11,7 @@ public class MailSystem : MonoBehaviour
     public GameObject verticalScroll;
     public List<MailData> MailList; // Modifier le type de DialogueList en List<DialogueData>
     public int DialogueNumber;
-    public int currentLineIndex;
+    public int currentLineIndex = 0;
     public int currentMailIndex = 0;
     public int posYDial = 0;
     public static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
@@ -29,8 +29,6 @@ public class MailSystem : MonoBehaviour
 
         // Récupérer le nom du joueur dans les playerprefs "PlayerPrefs.GetString("SelectedCharacter");"
         // pour l'attribuer comme valeur aux valeurs characternames[] de ma classe DialogueData lorsque la valeur est vide
-
-        currentLineIndex = 0; // Initialiser currentLineIndex à 0
 
         DisplayDialogue();
     }
@@ -65,33 +63,37 @@ public class MailSystem : MonoBehaviour
             }
             else
             {
+                if(!MailEnd) {
+                    MailData dialogueData = MailList[DialogueNumber];
+
+                    if (dialogueData.name == "Scientist01")
+                    {
+                        GameObject blockTimeMachine = transform.Find("/BlockTimeMachine").gameObject;
+                        blockTimeMachine.SetActive(false);
+                    } else if (dialogueData.name == "Scientist02")
+                    {
+                        GameObject PNJ_mycroft = transform.Find("/PNJ/PNJ_mycroft").gameObject;
+                        CharacterMycroftBehavior MycroftBehavior = PNJ_mycroft.GetComponent<CharacterMycroftBehavior>();
+                        MycroftBehavior.TriggerMovement();
+                    }
+                }
+
                 Mailinprogress = false;
                 MailEnd = true;
                 dialogueInProgress = false;
-
-                MailData dialogueData = MailList[DialogueNumber];
-
-                if (dialogueData.name == "Scientist01")
-                {
-                    GameObject blockTimeMachine = transform.Find("/BlockTimeMachine").gameObject;
-                    blockTimeMachine.SetActive(false);
-                } else if (dialogueData.name == "Scientist02")
-                {
-                    GameObject PNJ_mycroft = transform.Find("/PNJ/PNJ_mycroft").gameObject;
-                    CharacterMycroftBehavior MycroftBehavior = PNJ_mycroft.GetComponent<CharacterMycroftBehavior>();
-                    MycroftBehavior.TriggerMovement();
-                }
             }
         }
     }
 
     public void DisplayDialogue()
     {
-        Mailinprogress= true;
+        if(MailEnd) return;
+
+        Mailinprogress = true;
         MailData dialogueData = MailList[DialogueNumber];
         GameObject mailGo;
 
-        Debug.Log(dialogueData);
+        Debug.Log(dialogueData + " " + currentLineIndex);
         
         // Instancier des prefabs en fonction du nom du personnage
         if (dialogueData.characterNames[currentLineIndex] == "Scientist")
@@ -107,8 +109,8 @@ public class MailSystem : MonoBehaviour
             TMPro.TextMeshProUGUI nameField = nameMail.GetComponent<TMPro.TextMeshProUGUI>();
             nameField.text = dialogueData.characterNames[currentLineIndex];
            
-            Debug.Log("La valeur de PosYdial est" +posYDial);
-            Debug.Log("La valeur de Nombreligne est" + dialogueData.NombreLigne[currentLineIndex]);
+            // Debug.Log("La valeur de PosYdial est" +posYDial);
+            // Debug.Log("La valeur de Nombreligne est" + dialogueData.NombreLigne[currentLineIndex]);
         }
         else
         {
@@ -131,8 +133,8 @@ public class MailSystem : MonoBehaviour
                 nameField.text = dialogueData.characterNames[currentLineIndex];
             }
 
-            Debug.Log("La valeur de PosYdial est" + posYDial);
-            Debug.Log("La valeur de Nombreligne est" + dialogueData.NombreLigne[currentLineIndex]);
+            // Debug.Log("La valeur de PosYdial est" + posYDial);
+            // Debug.Log("La valeur de Nombreligne est" + dialogueData.NombreLigne[currentLineIndex]);
         }
 
         // Calculer la valeur de posYDial en fonction du nombre de lignes dans dialogueLines[]
@@ -147,12 +149,9 @@ public class MailSystem : MonoBehaviour
 
 
     public void AdvanceDialogue() {
-        if(MailEnd) {
-            DialogueNumber++;
-            currentLineIndex = 0;
-            MailEnd = false;
-            Mailinprogress = true;
-            // DisplayDialogue();
-        }
+        DialogueNumber++;
+        currentLineIndex = 0;
+        MailEnd = false;
+        Mailinprogress = true;
     }
 }

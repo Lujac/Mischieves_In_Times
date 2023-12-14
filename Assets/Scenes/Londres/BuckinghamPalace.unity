@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36651407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.14, y: -7.62, z: 0}
+  m_LocalPosition: {x: 5, y: -6.5, z: 0}
   m_LocalScale: {x: 8.9509, y: 8.3069, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382282039633213836, guid: 44ef4a9dc606b59448bf7f6b36686387, type: 3}
       propertyPath: m_Name
-      value: BlockTimeMachine
+      value: BlockTimeMachine1
       objectReference: {fileID: 0}
     - target: {fileID: 1382282039633213838, guid: 44ef4a9dc606b59448bf7f6b36686387, type: 3}
       propertyPath: m_Size.y
@@ -780,7 +780,7 @@ GameObject:
   m_Layer: 0
   m_Name: targetMycroft
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -792,7 +792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154931473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 3.31, z: -7.3082695}
+  m_LocalPosition: {x: 4.55, y: 5.99, z: -7.3082695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10794,6 +10794,7 @@ MonoBehaviour:
   posYDial: 0
   Mailinprogress: 0
   MailEnd: 0
+  BlockTimeMachine: {fileID: 951326850}
 --- !u!1 &863881886
 GameObject:
   m_ObjectHideFlags: 0
@@ -32702,6 +32703,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &951326850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382282039633213836, guid: 44ef4a9dc606b59448bf7f6b36686387, type: 3}
+  m_PrefabInstance: {fileID: 98464900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &957628880
 GameObject:
   m_ObjectHideFlags: 0
@@ -32787,14 +32793,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957628880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.57, y: 12.865673, z: 0}
+  m_LocalPosition: {x: -4.28, y: 10.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 227069731}
   - {fileID: 568662630}
   m_Father: {fileID: 1293046126}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &957628885
 BoxCollider2D:
@@ -33354,8 +33360,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 957628884}
   - {fileID: 1783994071}
+  - {fileID: 957628884}
   - {fileID: 1949498626}
   - {fileID: 154931474}
   m_Father: {fileID: 0}
@@ -34353,7 +34359,7 @@ Transform:
   m_Children:
   - {fileID: 575672443}
   m_Father: {fileID: 1293046126}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1783994073
 BoxCollider2D:
@@ -37797,10 +37803,10 @@ GameObject:
   m_Layer: 0
   m_Name: targetGardener
   m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1949498626
 Transform:
   m_ObjectHideFlags: 0
@@ -37809,7 +37815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949498625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.658, y: 12.493, z: -7.3082695}
+  m_LocalPosition: {x: -3.368, y: 10.227327, z: -7.3082695}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []

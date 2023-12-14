@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public abstract class CharacterBehavior : MonoBehaviour
 {
@@ -20,11 +21,11 @@ public abstract class CharacterBehavior : MonoBehaviour
 
     protected abstract void HandleDialogueEnd();
 
-    protected IEnumerator MoveToTarget()
+    protected IEnumerator MoveToTarget(Vector3 newPosition)
     {
-        while (transform.position != targetTransform.position)
+        while (transform.position != newPosition)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
             yield return null;
         }
 
@@ -32,12 +33,21 @@ public abstract class CharacterBehavior : MonoBehaviour
         // Destroy(gameObject);
     }
 
-    public void TriggerMovement()
+    public void TriggerMovementToTarget()
     {
         if (!isMoving && targetTransform != null)
         {
             isMoving = true;
-            StartCoroutine(MoveToTarget());
+            StartCoroutine(MoveToTarget(targetTransform.position));
+        }
+    }
+
+    public void TriggerMovementCustom(Vector3 newPosition)
+    {
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(MoveToTarget(newPosition));
         }
     }
 }

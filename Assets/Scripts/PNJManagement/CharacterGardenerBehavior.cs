@@ -7,7 +7,7 @@ public class CharacterGardenerBehavior : CharacterBehavior
 
     protected override void HandleDialogueEnd()
     {
-        TriggerMovement();
+        TriggerMovementToTarget();
 
         btnTab.GetComponent<Animator>().SetBool("notif", true);
         tabMenu.GetComponent<tab_menu>().notifbtn[5] = true;

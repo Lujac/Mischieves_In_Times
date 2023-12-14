@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Scientist02
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "It\u2019s the clock"
+  - "It\u2019s the clock, I think. There is a hole for it here, but it is not there."
   - "That\u2019s a problem. I have no idea where it could have fallen, or when, because
     you traveled through time."
   characterNames:
   - 
   - Scientist
-  NombreLigne: 0100000003000000
+  NombreLigne: 0200000003000000

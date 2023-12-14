@@ -17,6 +17,7 @@ public class MailSystem : MonoBehaviour
     public static bool dialogueInProgress = false; // Ajouter la déclaration de la variable dialogueInProgress
     public bool Mailinprogress = false;
     public bool MailEnd = false;
+    public GameObject BlockTimeMachine;
     
 
     void OnEnable()
@@ -66,15 +67,16 @@ public class MailSystem : MonoBehaviour
                 if(!MailEnd) {
                     MailData dialogueData = MailList[DialogueNumber];
 
-                    if (dialogueData.name == "Scientist01")
-                    {
-                        GameObject blockTimeMachine = transform.Find("/BlockTimeMachine").gameObject;
-                        blockTimeMachine.SetActive(false);
-                    } else if (dialogueData.name == "Scientist02")
-                    {
+                    if (dialogueData.name == "Scientist01") {
+                        BlockTimeMachine.SetActive(false);
+                    } else if (dialogueData.name == "Scientist02") {
                         GameObject PNJ_mycroft = transform.Find("/PNJ/PNJ_mycroft").gameObject;
                         CharacterMycroftBehavior MycroftBehavior = PNJ_mycroft.GetComponent<CharacterMycroftBehavior>();
-                        MycroftBehavior.TriggerMovement();
+                        MycroftBehavior.TriggerMovementToTarget();
+
+                        GameObject PNJ_gardener = transform.Find("/PNJ/PNJ_gardener").gameObject;
+                        CharacterGardenerBehavior GardenerBehavior = PNJ_gardener.GetComponent<CharacterGardenerBehavior>();
+                        GardenerBehavior.TriggerMovementCustom(MycroftBehavior.targetTransform.position + new Vector3(1, 0.5f, 0));
                     }
                 }
 

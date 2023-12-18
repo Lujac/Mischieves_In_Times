@@ -6,15 +6,4 @@ using UnityEngine;
 public class MailData : DialogueData
 {
     public int[] NombreLigne;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

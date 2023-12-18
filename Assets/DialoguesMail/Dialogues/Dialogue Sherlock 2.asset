@@ -29,7 +29,7 @@ MonoBehaviour:
   - "Well, if you find the culprit first, I\u2019ll eat my hat!"
   - Why would you eat such a nice hat?
   - ??
-  - "<i>Fin du prototype, merci d'avoir jou\xE9 !</i>"
+  - <i>You reach the end of the prototype, thanks for playing !</i>
   characterNames:
   - Sherlock Holmes
   - 
@@ -42,4 +42,4 @@ MonoBehaviour:
   - Sherlock Holmes
   - 
   - Sherlock Holmes
-  - Tutoriel
+  - Tutorial
